@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textract</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Textract</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Convert Images to Text Instantly</h1>
+        <p>Our OCR system makes it easy to extract text from images and PDFs quickly and accurately.</p>
+        <button class="upload-btn" onclick="openModal()">Upload Your Document</button>
+
+        <!-- Display file name and preview area -->
+        <div id="fileDisplayArea" class="file-display"></div>
+        
+        <!-- Container for preview image and OCR output table -->
+        <div class="preview-output-container">
+            <div id="filePreview" class="file-preview"></div>
+            <div class="ocr-output">
+                <h3>OCR Output</h3>
+                <table id="ocrTable">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Extracted Text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- OCR output will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="icon">🔍</i>
+                <h3>High Accuracy</h3>
+                <p>Advanced algorithms ensure precise text extraction.</p>
+            </div>
+            <div class="feature-item">
+                <i class="icon">🌐</i>
+                <h3>Selected Data Output</h3>
+                <p>Gives the output in a tabular form.</p>
+            </div>
+            <div class="feature-item">
+                <i class="icon">⚡</i>
+                <h3>Quick Processing</h3>
+                <p>Fast conversion to save you time and effort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Upload File</h3>
+                <p>Select your document or image file.</p>
+            </div>
+            <div class="step">
+                <h3>2. Choose Language</h3>
+                <p>Set your desired language for OCR.</p>
+            </div>
+            <div class="step">
+                <h3>3. Convert</h3>
+                <p>Click “Convert” to extract text.</p>
+            </div>
+            <div class="step">
+                <h3>4. Download</h3>
+                <p>Download your text file or copy directly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 OCR System. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </footer>
+    <!-- Modal for File Upload -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Upload Document</h2>
+            <input type="file" id="fileInput" accept=".png, .jpg, .jpeg, .pdf" onchange="displayFilePreview()">
+        </div>
+    </div>
+
+    <!-- Additional sections omitted for brevity -->
+
+    <script src="main.js"></script>
+</body>
+</html>
